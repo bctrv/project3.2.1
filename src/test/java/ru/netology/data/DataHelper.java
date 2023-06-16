@@ -27,10 +27,6 @@ public class DataHelper {
         return new AuthInfo("vasya", "qwerty123");
     }
 
-    private static String randomLogin() {
-        return faker.name().username();
-    }
-
     private static String randomPassword() {
         return faker.internet().password();
     }

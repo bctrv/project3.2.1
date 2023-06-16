@@ -26,4 +26,12 @@ public class BankTest {
         verificationPage.validVerify(verificationCode.getCode());
     }
 
+    @Test
+    void unsuccessfullLogin() {
+        var loginPage = open("http://localhost:9999", LoginPage.class);
+        var randomUser = DataHelper.getInvalidInfo();
+        var invalidLogin = loginPage.invalidLogin(randomUser);
+        invalidLogin.invalidLoginNotification();
+    }
+
 }
