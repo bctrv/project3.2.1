@@ -10,11 +10,11 @@ import java.sql.SQLException;
 
 public class SQLHelper {
 
-    private static QueryRunner runner = new QueryRunner();
+    public static QueryRunner runner = new QueryRunner();
 
     private SQLHelper() {}
 
-    private static Connection getConn() throws SQLException {
+    public static Connection getConn() throws SQLException {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/app","app","pass");
     }
 
